@@ -1,14 +1,26 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Univesrity of Toronto - Module 09 - Challenge 01 - README Generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Stefan Marinov",
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "8.2.4"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScorpionFiko/UTOR-MOD09-CHAL01-Readme-Generator.git"
+  },
+  "keywords": [
+    "inquirer",
+    "readme"
+  ],
+  "bugs": {
+    "url": "https://github.com/ScorpionFiko/UTOR-MOD09-CHAL01-Readme-Generator/issues"
+  },
+  "homepage": "https://github.com/ScorpionFiko/UTOR-MOD09-CHAL01-Readme-Generator#readme"
 }
