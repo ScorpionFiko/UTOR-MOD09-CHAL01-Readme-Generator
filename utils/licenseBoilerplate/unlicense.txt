@@ -1,34 +1,4 @@
-# undefined
-  
-
-
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-## Description
-  undefined
-
-
-
-## Table of Contents
-- [Installation](#installation)
-- [Functionality](#functionality)
-- [Usage](#usage)
-- [License](#license)
-
-
-
-
-
-## Installation
-  undefined
-
-## Functionality
-  undefined
-
-## Usage
-  undefined
-
-## License
-  Copyright 2023 undefined     
+    
     
     This is free and unencumbered software released into the public domain.
 
@@ -54,6 +24,3 @@
     OTHER DEALINGS IN THE SOFTWARE.
 
     For more information, please refer to <http://unlicense.org/>
-  
-  For more information, click on the license badge at the top of the document!
-

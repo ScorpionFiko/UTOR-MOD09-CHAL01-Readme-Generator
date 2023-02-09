@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
     case 4:
       return "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)]";
     case 5:
-      return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+      return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]";
     case 6:
       return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]";
     case 7:
@@ -52,9 +52,9 @@ function renderLicenseLink(license) {
     case 5:
       return "(https://opensource.org/licenses/BSD-3-Clause)";
     case 6:
-      return "(http://creativecommons.org/publicdomain/zero/1.0/)";
+      return "(https://www.boost.org/LICENSE_1_0.txt)";
     case 7:
-      return "[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)]";
+      return "(http://creativecommons.org/publicdomain/zero/1.0/)";
     case 8:
       return "(https://opensource.org/licenses/EPL-1.0)";
     case 9:
@@ -75,23 +75,74 @@ function renderLicenseLink(license) {
 
 // function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { 
-  if (license === 0 ) {
-    return ``;
+function renderLicenseSection(license, name) { 
+  let fileName = './utils/licenseBoilerplate/'; 
+  switch (parseInt(license)) {
+    case 0:
+      return ``;
+    case 1:
+      fileName +=  "apache-v2.0.txt";
+      break;
+    case 2:
+      fileName +=  "gpl-v3.0.txt";
+      break;
+    case 3:
+      fileName +=  "mit.txt";
+      break;
+    case 4:
+      fileName +=  "bsd-2.txt";
+      break;
+    case 5:
+      fileName +=  "bsd-3.txt";
+      break;
+    case 6:
+      fileName +=  "boost-v1.0.txt";
+      break;
+    case 7:
+      fileName +=  "cco-v1.0.txt";
+      break;
+    case 8:
+      fileName +=  "eclipse-v1.0.txt";
+      break;
+    case 9:
+      fileName +=  "agpl-v3.0.txt";
+      break;
+    case 10:
+      fileName +=  "gpl-v2.0.txt";
+      break;
+    case 11:
+      fileName +=  "lgpl-v3.0.txt";
+      break;
+    case 12:
+      fileName +=  "mozilla-v2.0.txt";
+      break;
+    case 13:
+      fileName +=  "unlicense.txt";
+      break;
+    default:
+      return "";
   }
 
-  return `Please refer to the LICENSE badge at the top of the readme. For more information about the license, please refer to the following link: ${renderLicenseLink(license)}`;
+  const fs = require('fs');
+  const file = fs.readFileSync(fileName, (err) => {
+    (err) ? console.log(err) : '';
+  } ).toString();
+  const year = new Date()
+  return `Copyright ${year.getFullYear()} ${name} ${file}
+  
+  For more information, click on the license badge at the top of the document!`;
 }
 
 // function that renders text of the particular section
 // takes in section Title as parameter, the section text, and
 // a boolean to check whether the section is the title.
-function renderSection(sectionTitle, section, title=false) { 
-  if (section === "" ) {
+function renderSection(sectionTitle, sectionBody, title=false) { 
+  if (sectionBody === "" && !title) {
     return ``;
   }
   // formats based on title boolean
-  return `#${(title ? ` `:`# ${sectionTitle}\n`)}${section}\n`;
+  return `#${(title ? ` `:`# `)}${sectionTitle}
+  ${sectionBody}\n\n`;
 }
 
 // function to render Table of Contents
@@ -122,27 +173,12 @@ function renderQuestionSection(data) {
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `${renderSection('title', data.title, true)}
+  return `${renderSection(data.title, '', true)}
 ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 ${renderSection('Description',data.description)}
 ${renderTOC(data)}
 
-${renderSection('Installation',data.install)}
-
-${renderSection('Functionality',data.functionality)}
-
-${renderSection('Usage',data.usage)}
-
-${renderSection('License',renderLicenseSection(data.license))}
-
-${renderSection('Contributing',data.contrib)}
-
-${renderSection('Tests',data.tests)}
-
-${renderSection('Questions',renderQuestionSection(data))}
-
-
-`;
+${renderSection('Installation',data.install)}${renderSection('Functionality',data.functionality)}${renderSection('Usage',data.usage)}${renderSection('License',renderLicenseSection(data.license, data.name))}${renderSection('Contributing',data.contrib)}${renderSection('Tests',data.tests)}${renderSection('Questions',renderQuestionSection(data))}`;
 
 }
 
