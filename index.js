@@ -11,32 +11,32 @@ const questions = [
     }, 
     {
         type: "input",
-        message: "Name your project",
+        message: "Project Name:",
         name: "title",
     },    
     {
         type: "input",
-        message: "Describe your project",
-        name: "description"
+        message: "Description:",
+        name: "description",
     }, 
     {
         type: "input",
-        message: "Provide your installation instructions",
-        name: "install"
+        message: "Installation:",
+        name: "install",
     }, 
     {
         type: "input",
-        message: "Provide your functionality features",
-        name: "functionality"
+        message: "Functionality:",
+        name: "functionality",
     }, 
     {
         type: "input",
-        message: "Provide your application usage",
-        name: "usage"
+        message: "Usage:",
+        name: "usage",
     }, 
     {
         type: "rawlist",
-        message: "select license type",
+        message: "License:",
         name: "license",
         choices: [
             {name: "No license", value: 0 },
@@ -59,23 +59,28 @@ const questions = [
     },
     {
         type: "input",
-        message: "Provide your contributions",
-        name: "contrib"
+        message: "Contributions to project:",
+        name: "contrib",
     }, 
     {
         type: "input",
-        message: "Provide your tests",
-        name: "tests"
+        message: "Credit to others:",
+        name: "credit",
     }, 
     {
         type: "input",
-        message: "Provide your github username",
-        name: "github"
+        message: "Tests:",
+        name: "tests",
+    }, 
+    {
+        type: "input",
+        message: "Github username:",
+        name: "github",
     },
     {
         type: "input",
-        message: "Provide your email",
-        name: "email"
+        message: "Email:",
+        name: "email",
     },  
 ];
 

@@ -140,10 +140,19 @@ function renderSection(sectionTitle, sectionBody, title=false) {
   if (sectionBody === "" && !title) {
     return ``;
   }
+
+  const test = "this<br>- has<br>- several<br>-breaks";
+  const split = test.split("<br>");
+  const message = "";
+  split.forEach(element => {
+    message += `${element}\n`
+  })
+
   // formats based on title boolean
   return `#${(title ? ` `:`# `)}${sectionTitle}
-  ${sectionBody}\n\n`;
+  ${sectionBody}\n\n${message}`;
 }
+
 
 // function to render Table of Contents
 // does not print sections that are left blank
@@ -155,6 +164,7 @@ ${(data.functionality !== "")? `- [Functionality](#functionality)` :``}
 ${(data.usage !== "")? `- [Usage](#usage)` :``}
 ${(data.license !== 0)? `- [License](#license)` :``}
 ${(data.contrib !== "")? `- [Contributing](#contributing)` :``}
+${(data.credit !== "")? `- [Credits](#credit)` :``}
 ${(data.tests !== "")? `- [Tests](#tests)` :``}
 ${(data.github !== "" || data.email !== "")? `- [Questions](#questions)` :``}
 `
@@ -178,7 +188,7 @@ ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 ${renderSection('Description',data.description)}
 ${renderTOC(data)}
 
-${renderSection('Installation',data.install)}${renderSection('Functionality',data.functionality)}${renderSection('Usage',data.usage)}${renderSection('License',renderLicenseSection(data.license, data.name))}${renderSection('Contributing',data.contrib)}${renderSection('Tests',data.tests)}${renderSection('Questions',renderQuestionSection(data))}`;
+${renderSection('Installation',data.install)}${renderSection('Functionality',data.functionality)}${renderSection('Usage',data.usage)}${renderSection('License',renderLicenseSection(data.license, data.name))}${renderSection('Contributing',data.contrib)}${renderSection('Credits',data.credit)}${renderSection('Tests',data.tests)}${renderSection('Questions',renderQuestionSection(data))}`;
 
 }
 
