@@ -112,7 +112,7 @@ ${(data.github !== "" || data.email !== "")? `- [Questions](#questions)` :``}
 function renderQuestionSection(data) {
   let message ="";
   if (data.github !== "") {
-    message += `View my profile on Github: [${data.github}](https://github.com/${data.github})\n`
+    message += `View my profile on Github: [${data.github}](https://github.com/${data.github})\n\n`
   }
   if (data.email !== "") {
     message += `Contact me via email: [${data.email}](mailto:${data.email})\n`
@@ -122,7 +122,7 @@ function renderQuestionSection(data) {
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-  const readmemd = `${renderSection('title', data.title, true)}
+  return `${renderSection('title', data.title, true)}
 ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 ${renderSection('Description',data.description)}
 ${renderTOC(data)}
@@ -143,8 +143,7 @@ ${renderSection('Questions',renderQuestionSection(data))}
 
 
 `;
-console.log(readmemd);
-return readmemd;
+
 }
 
 module.exports = generateMarkdown;

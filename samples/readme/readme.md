@@ -1,44 +1,48 @@
-# ewrtsdfg
+# sdf
 
-
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 ## Description
-ewrtsd
+asg
 
 
 ## Table of Contents
 - [Installation](#installation)
 - [Functionality](#functionality)
 - [Usage](#usage)
-
+- [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
 
 ## Installation
-qwefsdv
+awetg
 
 
 ## Functionality
-wqercxv
+aed
 
 
 ## Usage
-ertfsv
+asedg
 
 
+## License
+Please refer to the LICENSE badge at the top of the readme. For more information about the license, please refer to the following link: (https://opensource.org/licenses/BSD-2-Clause)
 
 
 ## Contributing
-ewrtsdfgb
+awerae
 
 
 ## Tests
-qewrtdsfg
+aerfawe
 
 
 ## Questions
-View my profile on Github: [qwerdsf](https://github.com/qwerdsf)
+View my profile on Github: [asdfae](https://github.com/asdfae)
+
+Contact me via email: [aeawew](mailto:aeawew)
 
 
 
