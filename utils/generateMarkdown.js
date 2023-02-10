@@ -159,14 +159,8 @@ function renderSection(sectionTitle, sectionBody, title=false) {
 function renderTOC(data) {
   return `
 ## Table of Contents
-${(data.install !== "")? `- [Installation](#installation)` :``}
-${(data.functionality !== "")? `- [Functionality](#functionality)` :``}
-${(data.usage !== "")? `- [Usage](#usage)` :``}
-${(data.license !== 0)? `- [License](#license)` :``}
-${(data.contrib !== "")? `- [Contributing](#contributing)` :``}
-${(data.credit !== "")? `- [Credits](#credit)` :``}
-${(data.tests !== "")? `- [Tests](#tests)` :``}
-${(data.github !== "" || data.email !== "")? `- [Questions](#questions)` :``}
+${(data.install !== "")? `- [Installation](#installation)\n` :``}${(data.functionality !== "")? `- [Functionality](#functionality)\n` :``}${(data.usage !== "")? `- [Usage](#usage)\n` :``}${(data.license !== 0)? `- [License](#license)\n` :``}${(data.contrib !== "")? `- [Contributing](#contributing)\n` :``}${(data.credit !== "")? `- [Credit](#credit)\n` :``}
+${(data.tests !== "")? `- [Tests](#tests)` :``}${(data.github !== "" || data.email !== "")? `- [Questions](#questions)\n` :``}
 `
 }
 // function that renders any specific text in the Question section
@@ -188,7 +182,7 @@ ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 ${renderSection('Description',data.description)}
 ${renderTOC(data)}
 
-${renderSection('Installation',data.install)}${renderSection('Functionality',data.functionality)}${renderSection('Usage',data.usage)}${renderSection('License',renderLicenseSection(data.license, data.name))}${renderSection('Contributing',data.contrib)}${renderSection('Credits',data.credit)}${renderSection('Tests',data.tests)}${renderSection('Questions',renderQuestionSection(data))}`;
+${renderSection('Installation',data.install)}${renderSection('Functionality',data.functionality)}${renderSection('Usage',data.usage)}${renderSection('License',renderLicenseSection(data.license, data.name))}${renderSection('Contributing',data.contrib)}${renderSection('Credit',data.credit)}${renderSection('Tests',data.tests)}${renderSection('Questions',renderQuestionSection(data))}`;
 
 }
 
