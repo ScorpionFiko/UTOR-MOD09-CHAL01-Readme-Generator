@@ -135,22 +135,22 @@ function renderLicenseSection(license, name) {
 
 // function that renders text of the particular section
 // takes in section Title as parameter, the section text, and
-// a boolean to check whether the section is the title.
+// a boolean to check whether the sectionTitle is the document header.
 function renderSection(sectionTitle, sectionBody, title=false) { 
   if (sectionBody === "" && !title) {
     return ``;
   }
-
-  const test = "this<br>- has<br>- several<br>-breaks";
-  const split = test.split("<br>");
-  const message = "";
-  split.forEach(element => {
-    message += `${element}\n`
+  // assumes <br> delimiter and splits the user input into an array
+  // after which it is concatenated with "newline" characters
+  const sectionBodySplit = sectionBody.split("<br>");
+  let message = "";
+  sectionBodySplit.forEach(line => {
+    message += `${line}\n`
   })
 
   // formats based on title boolean
   return `#${(title ? ` `:`# `)}${sectionTitle}
-  ${sectionBody}\n\n${message}`;
+  ${message}\n\n`;
 }
 
 

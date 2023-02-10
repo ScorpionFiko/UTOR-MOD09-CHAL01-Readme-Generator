@@ -55,13 +55,21 @@ The entire porject is built on Node.js utilizing two of additional libraries:
 - inquirer: to manage user input  
 - fs: to manage the file operations
 
-The application write the README to a README.MD file along with a JSON copy of the responses to README.JSON. 
+The application writes to the following directories:
+
+        /application_folder/samples/readme/readme.md
+        /application_folder/samples/json/readme.json
+
+The application reads license boilerplate language from the files stored in 
+
+        /application_folder/utils/licenseBoilerplate/
+
 
 ### Command Line:
 
 This is a command line application where user input can be questionable. As such there are a few items to be aware of:
 - The application does not check for whether the user input is pertaining to the section as opposed to random keystrokes. This is especially important for things like the Github username and email address: those are not verified for correctness.
-- Pressing the Enter (or Return) key does not cause a new line, but end of input. So there are cases where the use input is truncated. The new line to be used on the command line is < br >
+- Pressing the Enter (or Return) key does not cause a new line, but end of input. So there are cases where the use input is truncated. The new line to be used on the command line is < br >. The application then splits the string and inserts new line characters when necessary.
 - The formatting differs between a readme generated from the application and an actual readme generated from VS code (e.g. bullet point vs dashes).
 
 
