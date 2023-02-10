@@ -106,3 +106,7 @@ Lukas-h for the repo on markdown licence badges found here: https://gist.github.
 
 Please refer to the LICENSE in the repo.
 
+## Walkthrough
+
+Please go to https://youtu.be/BCBzZ7Q7I6A to watch the walkthrough (and subscribe to my channel).
+
