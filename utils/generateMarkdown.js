@@ -159,8 +159,7 @@ function renderSection(sectionTitle, sectionBody, title=false) {
 function renderTOC(data) {
   return `
 ## Table of Contents
-${(data.install !== "")? `- [Installation](#installation)\n` :``}${(data.functionality !== "")? `- [Functionality](#functionality)\n` :``}${(data.usage !== "")? `- [Usage](#usage)\n` :``}${(data.license !== 0)? `- [License](#license)\n` :``}${(data.contrib !== "")? `- [Contributing](#contributing)\n` :``}${(data.credit !== "")? `- [Credit](#credit)\n` :``}
-${(data.tests !== "")? `- [Tests](#tests)` :``}${(data.github !== "" || data.email !== "")? `- [Questions](#questions)\n` :``}
+${(data.install !== "")? `- [Installation](#installation)\n` :``}${(data.functionality !== "")? `- [Functionality](#functionality)\n` :``}${(data.usage !== "")? `- [Usage](#usage)\n` :``}${(data.license !== 0)? `- [License](#license)\n` :``}${(data.contrib !== "")? `- [Contributing](#contributing)\n` :``}${(data.credit !== "")? `- [Credit](#credit)\n` :``}${(data.tests !== "")? `- [Tests](#tests)\n` :``}${(data.github !== "" || data.email !== "")? `- [Questions](#questions)\n` :``}
 `
 }
 // function that renders any specific text in the Question section
