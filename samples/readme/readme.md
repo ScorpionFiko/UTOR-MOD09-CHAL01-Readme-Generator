@@ -3,7 +3,7 @@
 
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ## Description
   Repository containing the code for the README Generator. This is a server side project using node.js where the user is asked a few questions. Once the user answers those questions, the program generates a README file using the information provided. The README file is broken down into the following sections:
 
@@ -30,7 +30,7 @@ The user can provide as little or as much information as they desire for each se
 - [License](#license)
 - [Contributing](#contributing)
 - [Credit](#credit)
-
+- [Tests](#tests)
 - [Questions](#questions)
 
 
@@ -100,11 +100,18 @@ As the user selects the license option, the information from the file is pulled 
 ## License
   Copyright 2023 Stefan Marinov 
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
   
   For more information, click on the license badge at the top of the document!
 
@@ -123,6 +130,10 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 ## Credit
   Lukas-h for the repo on markdown licence badges found here: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
+
+## Tests
+  No automation test scripts have been developed and run. The application was tested manually by running it on the command line with different set of inputs
 
 
 ## Questions
